@@ -1,0 +1,152 @@
+:root {
+    /* Primary color */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* Secondary color */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Young-Serif";
+    src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: "outfit", serif;
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8;
+}
+
+h1,
+h2 {
+    font-family: "Young-Serif";
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--nutmeg);
+}
+
+h3 {
+    color: var(--dark-raspberry);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: var(--dark-raspberry);
+    margin-right: .4rem;
+    font-size: 1.5rem;
+}
+
+ol {
+    counter-reset: item 0;
+    list-style-position: inside;
+}
+
+ol li {
+    counter-increment: item;
+    list-style-type: none;
+}
+
+ol li::before {
+    content: counter(item) ". ";
+    color: var(--dark-raspberry);
+    font-weight: 700;
+    margin-right: .4rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.container {
+    width: 50%;
+    background-color: var(--white);
+    margin: 2.3rem 0;
+    border-radius: 0.4rem;
+    padding: 1.7rem;
+}
+
+.hero {
+    width: 100%;
+    /* padding: 1.3rem; */
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.title,
+.subtitle,
+.preparation-time,
+.ingredients,
+.instructions {
+    margin: 1rem 0;
+}
+
+.preparation-time {
+    padding: 1.5rem 4rem;
+    border-radius: 1rem;
+    background-color: var(--rose-white);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 0.5px solid rgb(186, 186, 186);
+}
+
+td {
+    padding: 0.8rem 0 0.8rem 1.3rem;
+}
+
+.caption {
+    color: var(--nutmeg);
+    font-weight: 700;
+}
+
+
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
